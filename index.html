@@ -1,16 +1,29 @@
+
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>CodePen - History Of TBG</title>
+    <link rel="canonical" href="https://codepen.io/Digital-marketing-Tavanbogd/pen/ZEmxjOq" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+  
 <style>
-
-@import "compass/css3";
-
 /* Variables */
-$color-1: black;
-$color-2: white;
-$color-3: rgb(0, 168, 89);
-
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
@@ -19,7 +32,9 @@ body {
 
 /* Layout */
 * {
-  @include box-sizing(border-box);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Styling */
@@ -27,35 +42,30 @@ body {
   margin: 4em auto;
   position: relative;
   max-width: 46em;
-  
-  &:before {
-    background-color: $color-1;
-    content: '';
-    margin-left: -1px;
-    position: absolute;
-    top: 0;
-    left: 2em;
-    width: 2px;
-    height: 100%;
-  }
+}
+.timeline:before {
+  background-color: black;
+  content: "";
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
 }
 
 .timeline-event {
   position: relative;
-  
-  &:hover {
-  
-    .timeline-event-icon {
-      @include rotate (-45deg);
-      background-image: linear-gradient(to right, rgb(41, 87, 164), rgb(0, 168, 89));
-    }
-    
-    .timeline-event-thumbnail {
-    
-      background-image: linear-gradient(to right, rgb(41, 87, 164), rgb(0, 168, 89));
-    
-    }
-  }
+}
+.timeline-event:hover .timeline-event-icon {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-image: linear-gradient(to right, #2957a4, #00a859);
+}
+.timeline-event:hover .timeline-event-thumbnail {
+  background-image: linear-gradient(to right, #2957a4, #00a859);
 }
 
 .timeline-event-copy {
@@ -64,31 +74,32 @@ body {
   top: -1.875em;
   left: 4em;
   width: 80%;
-  
-  h3 {
-    font-size: 1.75em;
-  }
-  
-  h4 {
-    font-size: 1.2em;
-    margin-bottom: 1.2em;
-  }
-  
-  strong {
-    font-weight: 700;
-  }
-  
-  p:not(.timeline-event-thumbnail) {
-    padding-bottom: 1.2em;
-  }
+}
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+.timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+.timeline-event-copy strong {
+  font-weight: 700;
+}
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
 }
 
 .timeline-event-icon {
-  @include transition(transform 0.2s ease-in);
-  @include rotate (45deg);
-  
-  background-color: $color-1;
-  outline: 10px solid $color-2;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 10px solid white;
   display: block;
   margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
@@ -99,29 +110,29 @@ body {
 }
 
 .timeline-event-thumbnail {
-  @include transition(box-shadow 0.5s ease-in 0.1s);
-  color: $color-2;
+  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+  -o-transition: box-shadow 0.5s ease-in 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  -webkit-transition-delay: 0.1s;
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
   font-size: 0.75em;
-  
-  background-color: $color-1;
-  @include box-shadow(inset 0 0 0 0em #ef795a);
+  background-color: black;
+  -moz-box-shadow: inset 0 0 0 0em #ef795a;
+  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+  box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em;
 }
 
-img
-{
-  margin-top:20px;
-  margin-bottom:10px;
+img {
+  margin-top: 20px;
+  margin-bottom: 10px;
   width: 5em;
   position: relative;
-  
-  
 }
 </style>
-
-
 <ul class="timeline">
   
   
