@@ -1,0 +1,619 @@
+<style>
+
+@import "compass/css3";
+
+/* Variables */
+$color-1: black;
+$color-2: white;
+$color-3: rgb(0, 168, 89);
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+/* Layout */
+* {
+  @include box-sizing(border-box);
+}
+
+/* Styling */
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+  
+  &:before {
+    background-color: $color-1;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+  }
+}
+
+.timeline-event {
+  position: relative;
+  
+  &:hover {
+  
+    .timeline-event-icon {
+      @include rotate (-45deg);
+      background-image: linear-gradient(to right, rgb(41, 87, 164), rgb(0, 168, 89));
+    }
+    
+    .timeline-event-thumbnail {
+    
+      background-image: linear-gradient(to right, rgb(41, 87, 164), rgb(0, 168, 89));
+    
+    }
+  }
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+  
+  h3 {
+    font-size: 1.75em;
+  }
+  
+  h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+  
+  p:not(.timeline-event-thumbnail) {
+    padding-bottom: 1.2em;
+  }
+}
+
+.timeline-event-icon {
+  @include transition(transform 0.2s ease-in);
+  @include rotate (45deg);
+  
+  background-color: $color-1;
+  outline: 10px solid $color-2;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event-thumbnail {
+  @include transition(box-shadow 0.5s ease-in 0.1s);
+  color: $color-2;
+  font-size: 0.75em;
+  
+  background-color: $color-1;
+  @include box-shadow(inset 0 0 0 0em #ef795a);
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+img
+{
+  margin-top:20px;
+  margin-bottom:10px;
+  width: 5em;
+  position: relative;
+  
+  
+}
+</style>
+
+
+<ul class="timeline">
+  
+  
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      <p class="timeline-event-thumbnail">1995 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/Fujifilm_logo.svg"></img> </div>
+    
+      <p>
+        Японы <strong>FUJIFILM</strong> компанийн албан ёсны эрхтэй борлуулагч болсноор <strong>Таван Богд Группийн</strong> эхлэл тавигдав.
+        
+      </p>
+    </div>
+  </li>
+
+  
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">1997 он</p>
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/TBI.svg"></img> </div>
+      <p>
+        <strong>Таван Богд Интернэйшнл ХХК</strong> байгуулагдаж гэр ахуйн болон өргөн хэрэглээний бараа бүтээгдэхүүнийг албан ёсны эрхтэйгээр Монголын зах зээлд нийлүүлж эхлэв. 
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">1997 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/UBP.svg"></img> </div>
+      <p>
+        <strong>Улаанбаатар Принт ХХК</strong> байгуулагдаж сурагчийн дэвтэр, өнгөт хэвлэлийн чиглэлээр үйл ажиллагаагаа явуулж эхлэв. 
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">1998 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/TBT.svg"></img> </div>
+      <p>
+       <strong> Таван Богд Трейд ХХК</strong> нь Таван Богд Группийн толгой компани бөгөөд группийн хэмжээнд бодлого стратеги, менежментийг нэгдсэн байдлаар тодорхойлох,  шинэ бизнесийг нээн хөгжүүлэх, хөрөнгө оруулалт болон охин компаниудад менежментийн дэмжлэг үзүүлдэг. 
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2001 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/UBG.svg"></img> </div>
+      <p>
+       <strong> Улаанбаатар Гурил ХХК</strong> үүсгэн байгуулагдаж, эх орны хөрсөнд ургасан улаан буудайгаар эрүүл хүнс үйлдвэрлэж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2001 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/Airlink.svg"></img> </div>
+      <p>
+       <strong> Эйрлинк Монголиа ХХК</strong>  байгуулагдаж, Олон Улсын Агаарын Тээврийн Холбооны албан ёсны эрхтэйгээр гадаад болон дотоод авиа компаниудын онгоцны тийз борлуулалтын үйлчилгээг үзүүлж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2002 он</p>
+      
+       <div class="zurag"><img style="width:100px" src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/BridgesStone.svg"></img> </div>
+      <p>
+        Дэлхийд борлуулалтаараа тэргүүлэгч <strong>BRIDGESTONE</strong> брэндийн дугуй борлуулж эхлэв. 
+        
+      </p>
+    </div>
+  </li>
+
+
+ 
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2003 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/Khanbank.svg"></img> </div>
+      <p>
+      Монгол Улсын хамгийн том арилжааны банк болох <strong>Хаан банкны хувьцаа эзэмшигч</strong> болов.
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2004 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Xerox.svg"></img> </div>
+      <p>
+        <strong>Xerox</strong> брэндийн албан ёсны эрхийг авч хэвлэх, хувилах тоног төхөөрөмжийг худалдан борлуулах, засвар үйлчилгээг үзүүлж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2004 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/c278ac496574440d361ec42d486bd3a1073a54d4/Juulchin.svg"></img> </div>
+      <p>
+       Монголын аялал жуулчлалын ууган компани болох <strong>Жуулчин ХХК</strong> нь Таван Богд Группийн салбар компани болов. 
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2005 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Kempinski.svg"></img> </div>
+      <p>
+        Европын дээд зэрэглэлийн Кемпински зочид буудлын сүлжээ <strong>Кемпински Хаан Паласыг амжилттай байгуулав.</strong>
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2007 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Gobi.svg"></img> </div>
+      <p>
+        Таван Богд Групп Япон түншүүдийнхээ хамт <strong>Говь ХК-ийн</strong> 73.45%-ийн хувьцааг эзэмших эрхтэйгээр хувьчлан авав. 
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2009 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Smart.svg"></img> </div>
+      <p>
+        <strong>Таван Богд Смарт Электроникс ХХК</strong> байгуулагдаж Funai, Dust Devil, Vax брэндийн бүтээгдэхүүнийг хэрэглэгчдэдээ хүргэж эхлэв. 
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2011 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Loccitane.svg"></img> </div>
+      <p>
+        Францын дэлхийд алдартай гоо сайхны брэнд болох <strong>L’OCCITANE</strong> брэндийн албан ёсны дистрибьютер болж, бутик дэлгүүрээ Central Tower болон Улаанбаатар Их дэлгүүрт нээв. 
+        
+      </p>
+    </div>
+  </li>
+
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2012 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/TOto.svg"></img> </div>
+      <p>
+        Япон улсын зах зээлийн 60%-ийг дангаар эзэлдэг, дэлхийд танигдсан <strong>ТОТО брэндийн албан ёсны төлөөлөгчөөр</strong> сонгогдон, нэрийн дэлгүүрээ ажиллуулж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+<li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2013 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/KFC.svg"></img> </div>
+      <p>
+        Дэлхийд алдартай шунан  дурлам, амтат шарсан тахиатай <strong>KFC сүлжээ</strong> рестораны албан ёсны эрхийг авч, анхны салбараа Монгол улсад нээв.
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2013 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/toyota.svg"></img> </div>
+      <p>
+        Дэлхийд автомашин үйлдвэрлэлийн борлуулалтаараа тэргүүлэгч Японы <strong>TOYOTA</strong> брэндийн автомашиныг албан ёсны эрхтэйгээр борлуулж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2014 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Pizzahut.svg"></img> </div>
+      <p>
+        <strong>PIZZA HUT</strong> брэндийн  албан ёсны эрхийг авч, хав халуун пиццаг  Монголын хэрэглэгчдэдээ хүргэж эхлэв. 
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2014 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Nagomi.svg"></img> </div>
+      <p>
+        Япон улсын үндэсний хоолны соёлыг Монголын зах зээлд түгээх зорилготой <strong>Sakura</strong> болон <strong>Nagomi</strong> ресторануудыг нээв.
+        
+      </p>
+    </div>
+  </li>
+
+  
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2016 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Godiva.svg"></img> </div>
+      <p>
+       Дэлхийн 100 гаруй оронд салбартай тансаг зэрэглэлийн <strong>GODIVA</strong> брэндийг албан ёсны эрхтэйгээр Монгол улсад нээв.
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2018 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Galleria.svg"></img> </div>
+      <p>
+        <strong>Галлериа Улаанбаатар</strong> худалдаа үйлчилгээний төвийг Нийслэл хотын зүрхэн хэсэгт нээв.
+        
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2018 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/littlesheep.jpg"></img> </div>
+      <p>
+        Yum! Brands -ийн <strong>LITLLE SHEEP</strong> хот пот брэндийн албан ёсны эрхийг авч дэлхийн хамгийн том хот пот рестораныг эх нутагтаа нээв. 
+        
+      </p>
+    </div>
+  </li>
+
+
+<li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2019 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/TBS.svg"></img> </div>
+      <p>
+        <strong>Таван Богд Солюшнс ХХК</strong> байгуулагдаж Axis, Xerox, Genetec зэрэг дэлхийд технологиор тэргүүлэгч 16 брэндтэй хамтарч "Технологийн шийдлийг бизнес бүрд хүргэнэ" алсын хараан дор ажиллаж байна. 
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2020 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Gerlug.svg"></img> </div>
+      <p>
+       <strong>Таван Богд Проперти ХХК</strong>  байгуулагдаж Монголын барилгын салбарт шинэ өнгө төрх, чанар стандартыг тогтоох <strong>GERLUG VISTA</strong> төслийг эхлүүлэв.
+        
+      </p>
+    </div>
+  </li>
+
+  
+
+  
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2021 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/TBF.svg"></img> </div>
+      <p>
+       <strong>Таван Богд Финанс ХХК</strong>-ийг үүсгэн байгуулж, харилцагч бүрийнхээ хэрэгцээнд нийцсэн санхүүгийн үйлчилгээг мэргэжлийн өндөр түвшинд үзүүлж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2022 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Capital.svg"></img> </div>
+      <p>
+       <strong>Таван Богд Капитал ХХК</strong>-ийг үүсгэн  байгуулж, дэвшилтэт технологид суурилсан брокер, андеррайтер, зөвлөхийн үйлчилгээг харилцагчдад хүргэж эхлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2022 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/Monbeef.svg"></img> </div>
+      <p>
+    <strong> “Мон Бийф” ХХК</strong> байгуулагдан эрчимжсэн мал аж ахуйг хөгжүүлэх, зах зээлд гарал үүсэл нь тодорхой, чанартай үхрийн мах нийлүүлэх зорилготойгоор үйл ажиллагаагаа эхлүүлэв.
+        
+      </p>
+    </div>
+  </li>
+
+
+
+
+  
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2023 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/MG.svg"></img> </div>
+      <p>
+   <strong>Таван Богд Монгол Грилл ХХК</strong> нь MG hot pot, MG steak, Nagome сүлжээ ресторануудаар олон улсын болон уламжлалт монгол хоолыг үйлчлүүлэгчдэдээ санал болгож байна. MG Steak ресторан нь Monbeef брэндийн өндөр зэрэглэлийн шүүслэг махаар хийсэн стейкээр үйлчилж эхлэв.
+      </p>
+    </div>
+  </li>
+
+  <li class="timeline-event">
+    
+    <label class="timeline-event-icon"></label>
+   
+    <div class="timeline-event-copy">
+      
+      <p class="timeline-event-thumbnail">2023 он</p>
+      
+       <div class="zurag"><img src="https://raw.githubusercontent.com/BgWHizz12/History2/main/geely.svg"></img> </div>
+      <p>
+   Дэлхийд аюулгүй байдал, чанар стандартаараа шалгарсан Шведийн <strong>VOLVO </strong> технологиор бүтээгдсэн <strong>Geely брэнд</strong>ийн албан ёсны эрхтэйгээр борлуулж эхлэв. 
+      </p>
+    </div>
+  </li>
+
+</ul>  
+
+
